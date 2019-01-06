@@ -1,4 +1,4 @@
-# ngx-loading-spinner 
+# ngx-loading-spinners 
 Angular 7 custom async loading spinner with two simple methods for your asychronous calls.
 
 ## Installation
@@ -10,14 +10,14 @@ Angular 7 custom async loading spinner with two simple methods for your asychron
 > Import module to your application master module
 
 ```javascript
-import { LoadingSpinnerModule } from 'ngx-loading-spinner';
+import { LoadingSpinnersModule } from 'ngx-loading-spinners';
 ```
 
 > Make an import entry as shown below
 
 ```javascript
 
-imports: [ LoadingSpinnerModule ]
+imports: [ LoadingSpinnersModule ]
 
 ```
 
@@ -37,11 +37,11 @@ imports: [ LoadingSpinnerModule ]
 
 ```
 
-> Import `LoadingSpinnerService` to the component where you want to show the spinner.
+> Import `LoadingSpinnersService` to the component where you want to show the spinner.
 
 ```javascript
 
-import { LoadingSpinnerService } from 'ngx-loading-spinner';
+import { LoadingSpinnersService } from 'ngx-loading-spinners';
 
 ```
 
@@ -50,7 +50,7 @@ import { LoadingSpinnerService } from 'ngx-loading-spinner';
 ```javascript
     public loaderUniqeName: String;
     constructor(
-        private spinnerService: LoadingSpinnerService
+        private spinnersService: LoadingSpinnersService
     ) { 
         this.loaderUniqeName = 'loaderUniqeName';
     }
@@ -61,7 +61,7 @@ import { LoadingSpinnerService } from 'ngx-loading-spinner';
 
 ```javascript
 
-this.spinnerService.show(loaderUniqeName);
+this.spinnersService.show(loaderUniqeName);
 
 ```
 
@@ -69,6 +69,6 @@ this.spinnerService.show(loaderUniqeName);
 
 ```javascript
 
-this.spinnerService.hide(loaderUniqeName);
+this.spinnersService.hide(loaderUniqeName);
 
 ```

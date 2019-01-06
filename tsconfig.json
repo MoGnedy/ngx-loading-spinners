@@ -20,10 +20,10 @@
     ],
     "paths": {
       "loading-spinner": [
-        "dist/ngx-loading-spinner"
+        "dist/ngx-loading-spinners"
       ],
       "loading-spinner/*": [
-        "dist/ngx-loading-spinner/*"
+        "dist/ngx-loading-spinners/*"
       ]
     }
   }
