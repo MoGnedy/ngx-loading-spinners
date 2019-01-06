@@ -1,27 +1,74 @@
-# LoadingSpinner
+# ngx-loading-spinner 
+Angular 7 custom async loading spinner with two simple methods for your asychronous calls.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+## Installation
 
-## Development server
+`npm i ngx-loading-spinners`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Usage 
 
-## Code scaffolding
+> Import module to your application master module
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```javascript
+import { LoadingSpinnerModule } from 'ngx-loading-spinner';
+```
 
-## Build
+> Make an import entry as shown below
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```javascript
 
-## Running unit tests
+imports: [ LoadingSpinnerModule ]
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
 
-## Running end-to-end tests
+> Include spinner component to your root level component.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```html
 
-## Further help
+<ngx-loading-spinner [name]="loaderUniqeName"> </ngx-loading-spinner>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+
+> You can user your own loader gif or svg file
+
+```html
+
+<ngx-loading-spinner [img]='pathToYourOwnFile/fileName' [name]="loaderUniqeName"> </ngx-loading-spinner>
+
+```
+
+> Import `LoadingSpinnerService` to the component where you want to show the spinner.
+
+```javascript
+
+import { LoadingSpinnerService } from 'ngx-loading-spinner';
+
+```
+
+> Inject dependancy 
+
+```javascript
+    public loaderUniqeName: String;
+    constructor(
+        private spinnerService: LoadingSpinnerService
+    ) { 
+        this.loaderUniqeName = 'loaderUniqeName';
+    }
+
+```
+
+> Use `show(loaderName: String)` method to display the loading spinner.
+
+```javascript
+
+this.spinnerService.show(loaderUniqeName);
+
+```
+
+> Use `hide(loaderName: String)` method to hide the loading spinner once the processing is done.
+
+```javascript
+
+this.spinnerService.hide(loaderUniqeName);
+
+```

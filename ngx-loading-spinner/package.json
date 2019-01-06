@@ -1,0 +1,31 @@
+{
+  "name": "ngx-loading-spinner",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Angular 7 custom async loading spinner.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoGnedy/ngx-loading-spinner.git"
+  },
+  "author": {
+    "email": "mognedy@gmail.com",
+    "name": "Mohamed Gnedy",
+    "url": "https://github.com/mognedy"
+  },
+  "keywords": [
+    "ngx-loading-spinner",
+    "angular spinner",
+    "async",
+    "angular 7 spinner",
+    "angular",
+    "typescript",
+    "spinner",
+    "ng",
+    "ng7",
+    "loading spinner"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0"
+  }
+}

@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "loading-spinner": [
+        "dist/ngx-loading-spinner"
+      ],
+      "loading-spinner/*": [
+        "dist/ngx-loading-spinner/*"
+      ]
+    }
   }
 }
