@@ -33,7 +33,7 @@ export class LoadingSpinnerComponent implements OnInit, AfterViewInit, OnDestroy
     private renderer2: Renderer2,
     private el: ElementRef
   ) {
-    this._defaultImage = '/assets/images/page-loader.gif';
+    this._defaultImage = this.loadingSpinnersService.defaultSpinnerFilePath;
     this._minHeight = '100%';
   }
 
@@ -60,7 +60,7 @@ export class LoadingSpinnerComponent implements OnInit, AfterViewInit, OnDestroy
   }
 
   public get img(): String {
-    return this._img;
+    return this._img || this._defaultImage;
   }
 
   @Input()
@@ -94,7 +94,6 @@ export class LoadingSpinnerComponent implements OnInit, AfterViewInit, OnDestroy
             this._showLoader = false;
           }
           this.cd.detectChanges();
-          // this.cd.markForCheck();
         }
       });
   }

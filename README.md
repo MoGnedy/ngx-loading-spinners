@@ -30,9 +30,19 @@ imports: [ LoadingSpinnersModule ]
 ```
 
 > You can user your own loader gif or svg file
-
+You can choose one way from the following:
+```javascript
+import { LoadingSpinnersService } from 'ngx-loading-spinners';
+export class AppComponent {
+  constructor(
+    private _spinnersService: LoadingSpinnersService
+  ) {
+      _spinnersService.defaultSpinnerFilePath = '/assets/images/page-loader.gif';
+  }
+}
+```
+Or
 ```html
-
 <ngx-loading-spinner [img]='pathToYourOwnFile/fileName' [name]="loaderUniqeName"> </ngx-loading-spinner>
 
 ```
@@ -50,7 +60,7 @@ import { LoadingSpinnersService } from 'ngx-loading-spinners';
 ```javascript
     public loaderUniqeName: String;
     constructor(
-        private spinnersService: LoadingSpinnersService
+        private _spinnersService: LoadingSpinnersService
     ) { 
         this.loaderUniqeName = 'loaderUniqeName';
     }
@@ -61,7 +71,7 @@ import { LoadingSpinnersService } from 'ngx-loading-spinners';
 
 ```javascript
 
-this.spinnersService.show(loaderUniqeName);
+this._spinnersService.show(loaderUniqeName);
 
 ```
 
@@ -69,6 +79,17 @@ this.spinnersService.show(loaderUniqeName);
 
 ```javascript
 
-this.spinnersService.hide(loaderUniqeName);
+this._spinnersService.hide(loaderUniqeName);
 
+```
+
+> You can use Spinner Service method to generate unique name 
+
+```javascript
+    public loaderUniqeName: String;
+    constructor(
+        private _spinnersService: LoadingSpinnersService
+    ) { 
+        this.loaderUniqeName = this._spinnersService.getUniqueName();
+    }
 ```
