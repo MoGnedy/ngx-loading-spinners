@@ -30,7 +30,7 @@ imports: [ LoadingSpinnersModule ]
 ```
 
 > You can use your own loader gif or svg file
--Set default spinner file.
+- Set default spinner file.
 ```javascript
 import { LoadingSpinnersService } from 'ngx-loading-spinners';
 export class AppComponent {
@@ -41,8 +41,8 @@ export class AppComponent {
   }
 }
 ```
-Or 
--Define file path for each spinner.
+> OR
+- Define file path for each spinner.
 ```html
 <ngx-loading-spinner [img]='pathToYourOwnFile/fileName' [name]="loaderUniqeName"> </ngx-loading-spinner>
 
